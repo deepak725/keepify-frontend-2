@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import {FiCheck} from 'react-icons/fi'
+import {FaEdit,FaTrashAlt,FaPlus} from 'react-icons/fa'
 import "./Todo.css"
 
 const Todo = () => {
@@ -176,8 +177,8 @@ const Todo = () => {
                 value={inputdata}
                 onChange={(event)=>setInputData(event.target.value)}
                 />
+               <FaPlus className="fa fa-plus add-btn" title="Add a task" onClick={() => {addItems();getTodo()} } />
                
-                <i className="fa fa-plus add-btn" title="Add a task" onClick={() => {addItems();getTodo()}}></i>
                 {/* {/taken from font awesome/} */}
             </div>
             {/* {/Show our items/} */}
@@ -195,16 +196,15 @@ const Todo = () => {
                             <h3>{curElem.todo.title}</h3>
                         <div className="todo-btn">
                     
-                    <i
-                      className="far fa-edit add-btn" title='Edit task'
-                      onClick={() => editItem(curElem._id,curElem.todo.title)}></i>
+                    <FaEdit title="Edit" className="far fa-edit add-btn"
+                      onClick={() => editItem(curElem._id,curElem.todo.title)} />
+
                     
-                    {/* <i className="far fa-regular fa-star" title='Mark as important' 
-                      ></i> */}
                     
-                    <i
-                      className="far fa-trash-alt add-btn" title='Delete task'
-                      onClick={() => deleteItems(curElem._id)}></i>
+                    <FaTrashAlt className="far fa-trash-alt add-btn" title='Delete task'
+                      onClick={() => deleteItems(curElem._id)} />
+
+                    
                   </div>
                     </div>
                     );}
@@ -231,9 +231,9 @@ const Todo = () => {
                  {/* <i
                    className="far fa-edit add-btn"
                    onClick={() => editItem(curElem._id,curElem.todo.title)}></i> */}
-                 <i
-                   className="far fa-trash-alt add-btn"
-                   onClick={() => deleteItems(curElem._id)}></i>
+                
+                <FaTrashAlt className="far fa-trash-alt add-btn" title='Delete task'
+                      onClick={() => deleteItems(curElem._id)} />
                </div>
                  </div>
                  );
