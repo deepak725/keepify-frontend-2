@@ -31,6 +31,12 @@
         width: 60%;
         font-size: 1em;
     }
+    
+    .home{
+        margin-top: 15%;
+        margin-left: 0%;
+        width: 100%;
+    }
   
     
 .welcome-txt #submit-btn{
