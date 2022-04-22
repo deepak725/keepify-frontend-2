@@ -72,9 +72,12 @@
       display: none;
         
     }
-    .formcontainer2{
+ .formcontainer2{
         margin: 5%;
+        margin-right: 8%;
+        margin-left: 0%;
     }
+
     .registerform{
   
         padding: 3%;
