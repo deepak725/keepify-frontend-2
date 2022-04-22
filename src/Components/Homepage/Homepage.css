@@ -24,23 +24,30 @@
 @media only screen and (max-width: 500px) {
   
   
+   
     .welcome-image{
-        display: none;
+        display: block;
+        margin-left: 50%;
+        width: 100%;
     }
     .welcome-txt{
-        width: 60%;
+        width: 70%;
         font-size: 1em;
     }
-    
+    .welcome-txt #submit-btn{
+        max-width:80%;
+    }
+
     .home{
         margin-top: 15%;
         margin-left: 0%;
+        margin-right: 10%;
         width: 100%;
+        flex-direction: column;
+        height: 100%;
     }
+   
   
-    
-.welcome-txt #submit-btn{
-    width:120%;
-}
+  
 
 }
